@@ -1,5 +1,4 @@
 use std::collections::HashSet;
-use std::hash::Hash;
 
 const TEST_DATA: &str = "edmzkxfoprcnhijtyvl
 adxntojykfcvzermplh
