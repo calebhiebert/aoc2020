@@ -196,24 +196,6 @@ fn print_grid_dbg(grid: &Vec<Vec<Seat>>, x: i32, y: i32) {
         });
 }
 
-fn print_grid_seats(grid: &Vec<Vec<Seat>>) {
-    println!("+++++++++++++++++");
-
-    grid
-        .iter()
-        .enumerate()
-        .for_each(|(y, ln)| {
-            ln
-                .iter()
-                .enumerate()
-                .for_each(|(x, _)| {
-                    print!("{}", occupied_neighbors_b(grid, x as i32, y as i32));
-                });
-
-            print!("\n");
-        });
-}
-
 fn safe_seat_check(grid: &Vec<Vec<Seat>>, x: i32, y: i32) -> Option<Seat> {
     if y < 0 || grid.len() <= y as usize {
         return None;
